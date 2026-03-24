@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bold Scroll</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #FF0000;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            text-transform: uppercase;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        /* The Scrolling Wrapper */
+        .scroll-wrapper {
+            width: 100%;
+            white-space: nowrap;
+            display: flex;
+            border-top: 5px solid #FF0000;
+            border-bottom: 5px solid #FF0000;
+            padding: 10px 0;
+        }
+
+        .scroll-text {
+            font-size: clamp(4rem, 10vw, 8rem);
+            font-weight: 900;
+            display: inline-block;
+            padding-right: 50px;
+        }
+
+        /* Animations */
+        .left-to-right {
+            animation: scroll-right 15s linear infinite;
+        }
+
+        .right-to-left {
+            animation: scroll-left 15s linear infinite;
+        }
+
+        /* Inverse Colors for Contrast */
+        .red-bg {
+            background-color: #FF0000;
+            color: #FFFFFF;
+        }
+
+        @keyframes scroll-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        @keyframes scroll-right {
+            from { transform: translateX(-50%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="scroll-wrapper">
+            <div class="scroll-text right-to-left">
+                MODERN DESIGN • BOLD TYPE • RED & WHITE • MODERN DESIGN • BOLD TYPE • RED & WHITE •
+            </div>
+            <div class="scroll-text right-to-left">
+                MODERN DESIGN • BOLD TYPE • RED & WHITE • MODERN DESIGN • BOLD TYPE • RED & WHITE •
+            </div>
+        </div>
+
+        <div class="scroll-wrapper red-bg">
+            <div class="scroll-text left-to-right">
+                STAY MINIMAL • KEEP PUSHING • FAST ACTION • STAY MINIMAL • KEEP PUSHING • FAST ACTION •
+            </div>
+            <div class="scroll-text left-to-right">
+                STAY MINIMAL • KEEP PUSHING • FAST ACTION • STAY MINIMAL • KEEP PUSHING • FAST ACTION •
+            </div>
+        </div>
+
+        <div class="scroll-wrapper">
+            <div class="scroll-text right-to-left">
+                STATIC CONTENT • SMOOTH MOTION • HIGH IMPACT • STATIC CONTENT • SMOOTH MOTION • HIGH IMPACT •
+            </div>
+            <div class="scroll-text right-to-left">
+                STATIC CONTENT • SMOOTH MOTION • HIGH IMPACT • STATIC CONTENT • SMOOTH MOTION • HIGH IMPACT •
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
