@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Deploying files to S3..."
+
+artifacts:
+  files:
+    - '**/*'
